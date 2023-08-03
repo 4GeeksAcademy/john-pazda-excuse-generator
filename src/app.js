@@ -6,7 +6,18 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  const subjects = ["Dog", "Brother", "Cat", "pet Tiger", "Teacher", "Boss"];
+  const subjects = [
+    "Dog",
+    "Brother",
+    "Cat",
+    "pet Tiger",
+    "Teacher",
+    "Boss",
+    "Dad",
+    "Mom",
+    "Sister",
+    "Rabbit",
+  ];
 
   const verbs = ["ate", "destroyed", "lost", "threw away", "forgot"];
 
@@ -18,7 +29,7 @@ window.onload = function() {
     "this morning",
     "last night",
     "on my birthday",
-    "on Christmas"
+    "on Christmas",
   ];
 
   const randomSubjectsIndex = Math.floor(Math.random() * subjects.length);
@@ -26,8 +37,8 @@ window.onload = function() {
   const randomPossessionsIndex = Math.floor(Math.random() * possessions.length);
   const randomTimesIndex = Math.floor(Math.random() * times.length);
 
-  const pageHeading = document.querySelector("#header");
-  console.log(pageHeading);
+  const phrase = document.querySelector("#phrase");
+  // console.log(pageHeading);
 
-  pageHeading.textContent = `My ${subjects[randomSubjectsIndex]} ${verbs[randomVerbsIndex]} my ${possessions[randomPossessionsIndex]} ${times[randomTimesIndex]}`;
+  phrase.textContent = `My ${subjects[randomSubjectsIndex]} ${verbs[randomVerbsIndex]} my ${possessions[randomPossessionsIndex]} ${times[randomTimesIndex]}`;
 };
